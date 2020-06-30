@@ -1,0 +1,137 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<style>
+.name {font-family:serif; font-style: italic;font-size:30px;}
+#washing img{ border:4px outset black;padding:10px;}
+.detail{font-size:17px; padding-right:40px;font-family:serif; font-style: italic;}
+#washing{padding:30px;}
+#product1 h4{text-align:center; font-weight:bold; padding-bottom:50px;font-family:serif; font-style: italic;}
+#product h1{font-family:serif; font-style: italic;font-family:serif; font-style: italic;}
+#product1{background-color:#F5B900;}
+#product{background-color:#F5B900;}
+#product1 img{border:3px solid black;}
+#head{background-color:#f2f2f2; padding:20px;}
+ #head h2,nav{ padding-left:60px;font-family:serif; font-style: italic;}
+#aboutus23 h5{font-size:19px; text-align:center;font-family:serif; font-style: italic;}
+#aboutus23 h1{font-family:serif; font-style: italic;text-align:center;}
+#aboutus h6{font-size:19px;font-family:serif; font-style: italic;}
+#aboutus23 img{ border:3px solid black;}
+</style>
+
+<div class="row" id="head">
+<h2><b>OUR WASHING SERVICES</b></h2>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/carwash/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/services/">Our Services</a></li>
+    
+  </ol>
+</nav>
+</div>
+
+
+<div class="row" id="num">
+<div class="col-md-12">
+<div class="row" id="aboutus23" >
+
+<div class="col-md-6" style="padding:40px;">
+<h1 style="padding:30px";><b>Our Washing </b><span style="color:#F5B900;"><b> Services</b></span></h1>
+<h5 style="padding-left:30px";> Dhillon Car Wash is a brand which is literally going to change the way people think about car cleaning. It is a unique mechanized car cleaning concept where cars are getting pampered by the latest equipments including high pressure cleaning machines, spray injection and extraction machines, high powered vacuum cleaners, steam cleaners and<br> so on.. </h5>
+<h4 style="text-align:center;font-family:serif; font-style: italic;padding:30px";>
+</h4>
+</div>
+
+<div class="col-md-3"  >
+<img src="{% static 'bluu.jpg'  %}" /> 
+</div>
+<div class="col-md-3" style="padding:5px">
+<img src="{% static 'blu.jpg'  %}" height="210px" /> 
+</div>
+<div class="col-md-3" >
+<img src="{% static 'rubbing.jpg'  %}" height="200px"/> 
+</div><div class="col-md-3" style="padding:10px">
+<img src="{% static 'bluu.jpg'  %}"  /> 
+</div>
+
+<div style="position:relative;">
+
+<img src="{% static 'carlogo.jpg' %}" height="250px" style="position:absolute; top:70px; right:230px;"/>
+</div>
+
+
+</div>
+</div>
+</div>
+<hr>
+<div class="row" id="washing">
+<div class="col-md-12 ">
+{% for washing in object_list %}
+<div class="col-md-5"  >
+<img src="/media/{{ washing.image }}" height="300px" width="100%"; />
+</div>
+<div class="col-md-7">
+<p class="name">{{ washing.name }} {{ washing.price }}</p>
+<hr>
+<p class="detail">{{ washing.detail}}<hr><br><a href="/booking/"><h4 style="padding:20px;font-family:serif; font-style: italic";><button type="button" class="btn btn-warning">
+    BOOK WASH NOW!
+  </button></a></p></h4>
+
+</div>
+
+{% endfor %}
+</div>
+</div>
+
+
+
+
+
+<hr>
+
+
+<div class="row" id="product">
+<div class="col-md-12">
+
+<h1 style="padding:40px";><b>Best Car Wash Products <span style="color:#F5B900;"><b> </b></span></h1>
+<hr >
+</div>
+<p>Steam cleaning is the process of using steam vapor to clean vehicles exterior and interior.</p>
+
+</div>
+
+<div class="row" id="product1">
+<div class="col-md-12">
+<div class="col-md-3">
+<img src="{% static 'oooo.jpg'  %}" height="200px" width="100%">
+<hr>
+<h4>1.Jopasu Car Duster Combo</h4>
+</div>
+
+<div class="col-md-3">
+<img src="{% static 'l.jpg'  %}"height="200px" width="100%">
+<hr>
+<h4>2.Heavy Duty 3 Layered Braided Water Hose Pipe</h4>
+</div>
+
+<div class="col-md-3">
+<img src="{% static '333.jpg'  %}"height="200px" width="100%">
+<hr>
+<h4>3.Wash and Wax Car shampoo</h4>
+</div>
+<div class="col-md-3">
+<img src="{% static 'bbbb.jpg'  %}"height="200px" width="100%">
+<hr>
+<h4>4.SOFTSPUN Microfiber Cloth</h4>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+{% endblock %}

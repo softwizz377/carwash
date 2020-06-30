@@ -1,0 +1,159 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<style>
+#aboutus h5{font-size:18px;font-family:serif; font-style: italic;}
+#aboutus h2{font-family:serif; font-style: italic;}
+
+#whowe h5{font-size:18px;font-family:serif; font-style: italic;}
+#image h1{ padding-top:60px; color:#F5B900; text-align:center;font-family:serif; font-style: italic; font-size:50px;}
+ #head{background-color:#f2f2f2; padding:20px;}
+ #head h2,nav{ padding-left:60px;font-family:serif; font-style: italic;}
+
+</style>
+<div class="row" id="head1">
+<div class="parallax1" id="image">
+<div class="col-md-12">
+<h1><b> ABOUT US</b></h1>
+
+</div>
+</div>
+</div>
+
+<div class="row" id="aboutus">
+<div class="col-md-12" "col-md-offset-2">
+<div class="col-md-5">
+<img src="{% static 'people.png'  %}" height="450px"; style="padding:40px";/> 
+</div>
+<div class="col-md-7" style="padding-left:40px;">
+<h2 style="padding:30px";><b>Have an issue </b><span style="color:#F5B900;"><b> With your car?</b></span></h2>
+<h5 style="padding:30px";>Dhillon Car Wash is a leading brand in the car wash and detailing segment; we have introduced a b2c web platform that enables customers to connect with the nearest door to door car washing service partner who is either our franchisee or associate partner. Our philosophy is to provide the highest level of customer satisfaction by using quality products. We look forward to providing world class services at your doorstep at affordable prices.We are one of the water savers in the car cleaning industries; we are encouraging you to save water and save lives. Generally, in the major cities of our country, a large amount of water is wasted in the process of cleaning the car. </h5>
+
+<ul>
+<h5><li>Fast, Professional and Friendly Service.</li></h5>
+<h5><li>Unlimited Help and Support, sharing the experience and best practices.</li></h5>
+<h5><li>Honest approach to business.</li></h5>
+<h5><li>An absolute Respect to our clients.</li></h5>
+<h5><li>Decent negotiation process, eliminating the unnecessary bureaucratic procedures.</li></h5>
+</ul>
+ <h4 style="padding:50px; font-family:serif; font-style: italic";><button class="btn btn-warning" onclick="window.location.href = '/contact';">Hire Us</button></h4>
+</div>
+</div>
+</div>
+
+
+
+<div class="row" id="whowe">
+<div class="col-md-6">
+<img src="{% static 'about1.jpg'  %}" height="500px"; style="padding-bottom:30px";/> 
+</div>
+<div class="col-md-6" style="padding-left:30px;">
+<h2 style="padding-top:40px;font-family:serif; font-style: italic";><b>Bring back your car gleaming like new!</b></span></h2>
+
+<h5 style="padding-left:30px";>We alwasys provide good services to our customers</h5>
+
+<h6 style="padding:30px;font-family:serif; font-style: italic";> Dhillon Car Wash is a unique mechanized car cleaning concept, a first-of-its-kind, which serves the purpose of the fast paced society we live in, where people want their cars cleaned in the shortest possible time by a professional with the help of high powered machines. Exppress Car Wash promises to make the car clean and happy in just 20 minutes.
+
+Dhillon Car Wash is a brand which is literally going to change the way people think about car cleaning. 
+ </h6>
+ 
+<div "col-md-3" style="padding-left:30px";>
+
+<img src="{% static 'face.png'  %}"/>
+	
+We bring smile in your face...
+<div "col-md-3" style="padding-top:20px";>
+<img src="{% static '41.png'  %}"/>
+	
+Get in touch with our App
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+<div class="row" id="achieve">
+<div class="col-md-12">
+<h1 style="font-family:serif; font-style: italic";><b>What We have<span style="color:#F5B900;font-family:serif; font-style: italic"; > <b>Achieved</b></span></h1>
+<hr>
+<h4 style="font-family:serif; font-style: italic";>Satisfied customers across the country...</h4>
+</div>
+</div>
+<div class="row" id="subachieve">
+<div class="col-md-12">
+<div class="col-md-4">
+<img src="{% static 'car-icon.png'  %}"/> 
+
+<h1 style="color:#F5B900";><span id="cnt" class="count" ><b>20</b></span><span id="cnt">+</span></h1>
+<p>Working Experience</p>
+</div>
+<div class="col-md-4">
+<img src="{% static 'public-icon.png'  %}"/> 
+<h1 style="color:#F5B900";><span id="cnt" class="count" ><b>1500</b></span><span id="cnt">+</span></h1>
+
+<p>Customers are Satisfied with our Services</p>
+</div>
+<div class="col-md-4">
+<img src="{% static 'hand-icon.png'  %}"/> 
+<h1 style="color:#F5B900";><span id="cnt" class="count" ><b>50</b></span><span id="cnt">+</span></h1>
+
+<p> Our Team<p>
+</div>
+</div>
+</div>
+<div class="row" id="service">
+<div class="col-md-12">
+<h1 style="font-family:serif; font-style: italic";><b>How we are  <span style="color:#F5B900;font-family:serif; font-style: italic";><b>Different<b></span></h1>
+
+</div>
+</div>
+<div class="row" id="different" >
+<div class="col-md-4">
+<div class="icon-wrapper" id="icon">
+<img src="{% static 'wash-img.png'  %}"/> 
+</div>
+<h3 style="color:#F5B900;font-family:serif; font-style: italic";><b> Eco-Friendly</b></h3>
+<p style="font-family:serif; font-style: italic";>Consuming 60-70% less water than any regular service stations, our target is to reach a point where we can deliver washes at even less than 1% of Water currently consumed which will go a long way in conserving the Mother Nature.</p>
+</div>
+<div class="col-md-4">
+<div class="icon-wrapper" id="icon">
+<img src="{% static 'repaire-img.png'  %}"/> 
+</div>
+<h3 style="color:#F5B900;font-family:serif; font-style: italic";><b> Impeccable Quality</b></h3>
+<p style="font-family:serif; font-style: italic";>Don't get your Drive Machines scratched by simply using detergents or cotton clothes on them. The best quality Microfiber Clothe and Globally recognized Brands form a perfect Balance. Ensuring best quality standards is what we thrive for.</p>
+</div>
+<div class="col-md-4" id="icon">
+<div class="icon-wrapper">
+<img src="{% static 'watch-img.png'  %}"/> 
+</div>
+<h3 style="color:#F5B900;font-family:serif; font-style: italic";><b> Doorstep Delivery</b></h3>
+<p style="font-family:serif; font-style: italic";>TheServices are always delayed because of the hassle of making visits and Queuing up. Ensuring the comfort of your own personal environment, your place, your time, quality and commitment. </p>
+</div>
+</div>
+
+
+<script>
+
+
+$('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+</script>
+
+{% endblock %}

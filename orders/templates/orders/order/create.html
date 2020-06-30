@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Your Shopping Cart| Checkout
+{% endblock %}
+
+{% block content %}
+<style>
+#image h1{ padding-top:60px; color:#F5B900; text-align:center;font-family:serif; font-style: italic; font-size:50px;}
+</style>
+<div class="row" id="head1">
+<div class="parallax1" id="image">
+<div class="col-md-12">
+<h1><b>Checkout Now!</b></h1>
+
+</div>
+</div>
+</div>
+
+    <div class="container-fluid" >
+	
+           
+            <div class="col-md-8">
+                <h2 style=" padding:30px;text-align:center;font-family:serif; font-style: italic;"><b>Checkout Now!</b></h2>
+                <form action="." method="post"style="padding:90px; border:solid 3px black;">
+                    {% csrf_token %}
+                    {{ form.as_p }}<br>
+                    <input type="submit" class="btn btn-warning" value="Place order">
+                </form>
+            </div>
+            <div class="col-md-4">
+                <div class="page-header">
+                   <h2 style="text-align:center;font-family:serif; font-style: italic;"> <b>Your Order</b></h2>
+                </div>
+                <ul class="list-group"style="padding:40px; border:solid 3px black;">
+                    {% for item in cart %}
+                        <li class="list-group-item">
+                        {{ item.quantity }}x {{ item.product.name }}
+                        <span>Rs.. {{ item.total_price }}</span>
+                        </li>
+                    {% endfor %}
+
+                <li class="list-group-item active">Total Cost: Cash On Delivary. {{ cart.get_total_price }}</li>
+                </ul>
+
+            </div>
+            
+            </div>
+       
+{% endblock %}

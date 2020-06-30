@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+<style>
+.subcard{
+	border:2px outset #d7d7d9; box-shadow:1px 1px 10px ##FFFFFF; margin-bottom:30px; margin-top:30px; text-transform:capitalize;
+	padding:10px; text-align:center;
+
+
+}
+.blog1.title{ font-weight:bold;font-size:10px;}
+.blog1 .detail{ font-style:italic;padding:10px;text-align:center;}
+.blog1 .date{ font-weight:bold; color:black;text-align:left;}
+.blog1 .name{ font-weight:bold; color:black;text-align:left;}
+.subcard h2{font-weight:bold;font-size:25px;}
+.detail{ font-style:italic;padding:10px;text-align:center;}
+.row{background-color:#f2f2f2;}
+
+.pagination a { text-align:center;
+  margin: 0 4px; /* 0 is for top and bottom. Feel free to change it */
+  
+ 
+}
+
+
+#navi{background-color:#F5B900;}
+#navi{padding:40px;}
+#blo{background-color:#f2f2f2; padding:20px;}
+ #blo h2,nav{ padding-left:90px;font-family:serif; font-style: italic;}
+</style>
+
+<div class="row" id="blog1">
+<div class="col-md-10 col-md-offset-1">
+{% for blog1 in object_list %}
+<div class="col-md-12">
+<div class="col-md-12 subcard">
+<h2>{{ blog1.title}}</h2>
+<p class="name">{{ blog1.name }}</p>
+<p class="date">{{ blog1.date }}</p>
+<img src="/media/{{ blog1.photo }}" height="300" width="80%" />
+<p class="detail">{{ blog1.detail}}<br>
+<!--<button onclick="myFunction()" id="myBtn">Read more</button>-->
+</p>
+
+
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+
+<div class="row" id="navi">
+
+<div class="pagination">
+
+<li><a href="/blog/">1</a></li>
+<li><a href="/blog1/">2</a></li>
+
+
+
+</div>
+</div>
+{% endblock %}

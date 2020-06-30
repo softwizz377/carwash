@@ -1,0 +1,618 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<style>
+.form-container{background-color:white;}
+.add_sec {
+    padding: 0 20px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.add_sec > span {
+    color: #0b3c5d;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+</style>
+<div class="row" style="padding:60px"; id="image">
+<div class="col-md-12 col-md-offest-2 form-container" style="padding:20px";>
+<h2 style="text-align:center";><b>Basic Information</b></h2>
+<hr>
+<form action="/insertbooking1" method="post">
+{% csrf_token %}
+<div class="row">
+<div class="col-md-4 form-group">
+<label for="name">Name:</label>
+<input type="text" name="username" class="form-control" id="text" value="" required>
+</div>
+<div class="col-md-4 form-group">
+<label for="phone">Phone No:</label>
+ <input type="text" maxlength="10" name="userphone" id="phone" class="form-control" value="" required>
+ </div>
+ <div class="col-md-4 form-group">
+ <label for="email"> E-mail:</label>
+<input type="email" name="useremail" class="form-control" id="email" placeholder="" >
+ </div>
+ </div>
+ <div class="row">
+ <div class="col-md-8 form-group">
+ <label for="Address">Locality/Address:</label>
+ <input type="text" name="useraddress" class="form-control" id="text" placeholder="" required>
+ </div>
+<div class="col-md-4 form-group">
+ <label for="city"> City:</label>
+ <select class="form-control" name="usercity" required>					
+<option value="">--Select City--</option>  	
+<option value="Bathinda">Bathinda</option>
+</select>
+</div>
+</div>
+<div class="col-md-12">
+<h2 style="text-align:center";><b>Vehicle and Service Information</b></h2>
+<hr>					
+</div>
+<div class="col-md-12">
+<h3 ><b>My Awesome Car is:-</b></h3>
+</div>	
+<div class="col-md-6" style="padding:30px";>
+<select class="form-control" name="selectcar" required>	
+<option >Abarth 500 (HATCHBACK)</option>
+                                <option >Ambassador (SEDAN)</option>
+                                <option >Ashok Leyland Stile (SUV)</option>
+                                <option >Aston Martin DB9 (PREMIUM)</option>
+                                <option  >Aston Martin DBS (PREMIUM)</option>
+                                <option>Aston Martin One 77 (PREMIUM)</option>
+                                <option>Aston Martin Rapide (PREMIUM)</option>
+                                <option>Aston Martin Vanquish (PREMIUM)</option>
+                                <option>Aston Martin Vantage (PREMIUM)</option>
+                                <option >Aston Martin Virage (PREMIUM)</option>
+                                <option >Aston Martin Zagato (PREMIUM)</option>
+                                <option>Audi A1 (LUXURY)</option>
+                                <option >Audi A2 (LUXURY)</option>
+                                <option >Audi A3 (LUXURY)</option>
+                                <option >Audi A3 cabriolet (LUXURY)</option>
+                                <option >Audi A4 (LUXURY)</option>
+                                <option >Audi A4 2008-2014 (LUXURY)</option>
+                                <option >Audi A5 (PREMIUM)</option>
+                                <option >Audi A6 (PREMIUM)</option>
+                                <option>Audi A7 (PREMIUM)</option>
+                                <option>Audi A8 (PREMIUM)</option>
+                                <option >Audi A8 2010-2013 (PREMIUM)</option>
+                                <option >Audi Q1 (PREMIUM)</option>
+                                <option >Audi Q2 (PREMIUM)</option>
+                                <option >Audi Q3 (PREMIUM)</option>
+                                <option >Audi Q4 (PREMIUM)</option>
+                                <option >Audi Q5 (PREMIUM)</option>
+                                <option>Audi Q5 2008-2012 (PREMIUM)</option>
+                                <option >Audi Q6 (PREMIUM)</option>
+                                <option >Audi Q7 (PREMIUM)</option>
+                                <option  >Audi Q8 (PREMIUM)</option>
+                                <option >Audi R8 (PREMIUM)</option>
+                                <option >Audi R8 2006-2012 (PREMIUM)</option>
+                                <option  >Audi RS5 (PREMIUM)</option>
+                                <option >Audi RS5 2011-2012 (PREMIUM)</option>
+                                <option >Audi RS6 (PREMIUM)</option>
+                                <option>Audi RS7 (PREMIUM)</option>
+                                <option >Audi S4 (PREMIUM)</option>
+                                <option  >Audi S5 (PREMIUM)</option>
+                                <option  >Audi S6 (PREMIUM)</option>
+                                <option>Audi S7 (PREMIUM)</option>
+                                <option  >Audi TT (PREMIUM)</option>
+                                <option >Austin A40 (PREMIUM)</option>
+                                <option >Bentley Arnage (EXOTIC)</option>
+                                <option >Bentley Azure (EXOTIC)</option>
+                                <option >Bentley Brookland (EXOTIC)</option>
+                                <option >Bentley Continental (EXOTIC)</option>
+                                <option >Bentley EXP 9F (EXOTIC)</option>
+                                <option >Bentley Flying Spur (EXOTIC)</option>
+                                <option >Bentley Mulsanne (EXOTIC)</option>
+                                <option >Benz  C-Class clk (PREMIUM)</option>
+                                <option >Benz M-class (PREMIUM)</option>
+                                <option >BMW 1 Series (LUXURY)</option>
+                                <option  >BMW 2 Series (LUXURY)</option>
+                                <option >BMW 3 Series (LUXURY)</option>
+                                <option >BMW 3 Series 2005-2011 (LUXURY)</option>
+                                <option >BMW 3581i (LUXURY)</option>
+                                <option >BMW 4 Series (LUXURY)</option>
+                                <option >BMW 5 Series (LUXURY)</option>
+                                <option >BMW 5 Series 2003-2012 (LUXURY)</option>
+                                <option >BMW 6 Series (LUXURY)</option>
+                                <option >BMW 7 Series (LUXURY)</option>
+                                <option >BMW 7 Series 2007-2012 (LUXURY)</option>
+                                <option >BMW Gran Turismo (LUXURY)</option>
+                                <option >BMW i3 (EXOTIC)</option>
+                                <option >BMW i8 (EXOTIC)</option>
+                                <option >BMW M Series (PREMIUM)</option>
+                                <option >BMW Mini (PREMIUM)</option>
+                                <option >BMW X1 (LUXURY)</option>
+                                <option >BMW X2 (LUXURY)</option>
+                                <option>BMW X3 (LUXURY)</option>
+                                <option  >BMW X3 2011-2013 (LUXURY)</option>
+                                <option >BMW X5 (LUXURY)</option>
+                                <option >BMW X5 2007-2013 (LUXURY)</option>
+                                <option >BMW X6 (LUXURY)</option>
+                                <option >BMW XS (LUXURY)</option>
+                                <option  >BMW Z2 (EXOTIC)</option>
+                                <option  >BMW Z4 (EXOTIC)</option>
+                                <option >BMW Z4 2009-2013 (EXOTIC)</option>
+                                <option  >Bugatti Veyron (EXOTIC)</option>
+                                <option  >Cadillac CTS (LUXURY)</option>
+                                <option >Cadillac Escalade (LUXURY)</option>
+                                <option >Caterham 7 (LUXURY)</option>
+                                <option  >Chevrolet Adra (SUV)</option>
+                                <option  >Chevrolet Agile (HATCHBACK)</option>
+                                <option  >Chevrolet Aveo (SEDAN)</option>
+                                <option  >Chevrolet Aveo Diesel (SEDAN)</option>
+                                <option >Chevrolet Aveo U-VA (SEDAN)</option>
+                                <option >Chevrolet Baojun (HATCHBACK)</option>
+                                <option  >Chevrolet Beat (HATCHBACK)</option>
+                                <option >Chevrolet Beat 2010-2013 (HATCHBACK)</option>
+                                <option  >Chevrolet Beat Electric (HATCHBACK)</option>
+                                <option  >Chevrolet Camaro (EXOTIC)</option>
+                                <option  >Chevrolet Captiva (SUV)</option>
+                                <option  >Chevrolet Captiva 2008-2011 (SUV)</option>
+                                <option  >Chevrolet CN100 (MUV)</option>
+                                <option >Chevrolet Corvette (EXOTIC)</option>
+                                <option  >Chevrolet Cruze (SEDAN)</option>
+                                <option  >Chevrolet Enjoy (SUV)</option>
+                                <option  >Chevrolet Forester (SUV)</option>
+                                <option  >Chevrolet MPV (MUV)</option>
+                                <option  >Chevrolet Optra (SEDAN)</option>
+                                <option  >Chevrolet Optra Magnum (SEDAN)</option>
+                                <option >Chevrolet OptraSRV (HATCHBACK)</option>
+                                <option  >Chevrolet Orlando (SUV)</option>
+                                <option  >Chevrolet Sail (SEDAN)</option>
+                                <option >Chevrolet Sail Hatchback (HATCHBACK)</option>
+                                <option  >Chevrolet Sonic (SEDAN)</option>
+                                <option  >Chevrolet Spark (HATCHBACK)</option>
+                                <option  >Chevrolet Spin (MUV)</option>
+                                <option  >Chevrolet Tavera (SUV)</option>
+                                <option >Chevrolet Trailblazer (SUV)</option>
+                                <option  >Chevrolet Trax (HATCHBACK)</option>
+                                <option  >Chevrolet Volt (PREMIUM)</option>
+                                <option  >Chrysler 300 (LUXURY)</option>
+                                <option >Chrysler Avenger (LUXURY)</option>
+                                <option >Daewoo Cielo (SEDAN)</option>
+                                <option >Daewoo Matiz (HATCHBACK)</option>
+                                <option  >Datsun GO (HATCHBACK)</option>
+                                <option >Datsun GO Plus (SUV)</option>
+                                <option  >Datsun on DO (SEDAN)</option>
+                                <option  >DC Avanti (EXOTIC)</option>
+                                <option  >Dodge Nitro (EXOTIC)</option>
+                                <option  >Ferrari 458 Italia (EXOTIC)</option>
+                                <option >Ferrari 458 Speciale (EXOTIC)</option>
+                                <option >Ferrari 458 Spider (EXOTIC)</option>
+                                <option >Ferrari 575 Superamerica (EXOTIC)</option>
+                                <option >Ferrari 599 GTB Fiorano (EXOTIC)</option>
+                                <option  >Ferrari 612 (EXOTIC)</option>
+                                <option >Ferrari California (EXOTIC)</option>
+                                <option  >Ferrari Enzo (EXOTIC)</option>
+                                <option  >Ferrari F12berlinetta (EXOTIC)</option>
+                                <option  >Ferrari F430 (EXOTIC)</option>
+                                <option  >Ferrari F620 GT (EXOTIC)</option>
+                                <option >Ferrari FF (EXOTIC)</option>
+                                <option >Fiat 500 (HATCHBACK)</option>
+                                <option  >Fiat Avventura (HATCHBACK)</option>
+                                <option >Fiat Bravo (HATCHBACK)</option>
+                                <option  >Fiat Grande Punto (HATCHBACK)</option>
+                                <option >Fiat Grande Punto 2009-2013 (HATCHBACK)</option>
+                                <option >Fiat Linea (SEDAN)</option>
+                                <option  >Fiat Linea 2007-2013 (SEDAN)</option>
+                                <option  >Fiat Linea Classic (SEDAN)</option>
+                                <option  >Fiat Palio (HATCHBACK)</option>
+                                <option  >Fiat Palio D (HATCHBACK)</option>
+                                <option >Fiat Palio NV (HATCHBACK)</option>
+                                <option >Fiat Palio Stile (HATCHBACK)</option>
+                                <option >Fiat Palio Stile Multijet (HATCHBACK)</option>
+                                <option  >Fiat Panda (HATCHBACK)</option>
+                                <option >Fiat Petra (SEDAN)</option>
+                                <option  >Fiat Premier Padmini (SEDAN)</option>
+                                <option  >Fiat Punto Abarth (HATCHBACK)</option>
+                                <option >Fiat Punto Adventure (HATCHBACK)</option>
+                                <option  >Fiat Punto EVO (HATCHBACK)</option>
+                                <option  >Fiat Siena (SEDAN)</option>
+                                <option  >Fiat Uno (HATCHBACK)</option>
+                                <option >Force Gurkha (SUV)</option>
+                                <option>Force MPV (SUV)</option>
+                                <option  >Force One (SUV)</option>
+                                <option >Force Trax Cruiser (SUV)</option>
+                                <option  >Force Viano (SUV)</option>
+                                <option >Ford Classic (SEDAN)</option>
+                                <option  >Ford Ecosport (SUV)</option>
+                                <option  >Ford Endeavour (SUV)</option>
+                                <option  >Ford Endeavour 2003-2013 (SUV)</option>
+                                <option >Ford Escort (SEDAN)</option>
+                                <option  >Ford Falcon (PREMIUM)</option>
+                                <option  >Ford Fiesta (SEDAN)</option>
+                                <option  >Ford Fiesta 2004-2010 (SEDAN)</option>
+                                <option>Ford Fiesta 2011-2013 (SEDAN)</option>
+                                <option >Ford Fiesta Classic (SEDAN)</option>
+                                <option  >Ford Fiesta Hatchback (HATCHBACK)</option>
+                                <option  >Ford Figo (HATCHBACK)</option>
+                                <option  >Ford Figo 2010-2012 (HATCHBACK)</option>
+                                <option  >Ford Figo Concept (HATCHBACK)</option>
+                                <option  >Ford Focus (HATCHBACK)</option>
+                                <option  >Ford Fusion (SEDAN)</option>
+                                <option  >Ford Ikon (SEDAN)</option>
+                                <option >Ford Mondeo (PREMIUM)</option>
+                                <option >Ford Mondeo 2001-2006 (PREMIUM)</option>
+                                <option >Ford New Ikon (SEDAN)</option>
+                                <option  >Hindustan Motors Contessa (SEDAN)</option>
+                                <option  >Honda Accord (PREMIUM)</option>
+                                <option >Honda Accord Diesel (PREMIUM)</option>
+                                <option  >Honda Amaze (SEDAN)</option>
+                                <option >Honda Brio (HATCHBACK)</option>
+                                <option  >Honda City (SEDAN)</option>
+                                <option >Honda City 1997-2006 (SEDAN)</option>
+                                <option  >Honda City 2008-2011 (SEDAN)</option>
+                                <option  >Honda City 2011-2013 (SEDAN)</option>
+                                <option >Honda City ZX (SEDAN)</option>
+                                <option  >Honda Civic (SEDAN)</option>
+                                <option  >Honda CR-V (SUV)</option>
+                                <option  >Honda CR-V 2007-2012 (SUV)</option>
+                                <option  >Honda Freed (MUV)</option>
+                                <option  >Honda Jazz (HATCHBACK)</option>
+                                <option  >Honda Jazz 2009-2013 (HATCHBACK)</option>
+                                <option  >Honda Mobilio (SUV)</option>
+                                <option >Honda New Accord (PREMIUM)</option>
+                                <option  >Hummer H2 (EXOTIC)</option>
+                                <option >Hummer H3 (EXOTIC)</option>
+                                <option  >Hyundai Accent (SEDAN)</option>
+                                <option  >Hyundai Avante (SEDAN)</option>
+                                <option  >Hyundai Elantra (SEDAN)</option>
+                                <option  >Hyundai Elantra 2006-2009 (SEDAN)</option>
+                                <option  >Hyundai Elite i20 (HATCHBACK)</option>
+                                <option >Hyundai EON (HATCHBACK)</option>
+                                <option >Hyundai Getz (HATCHBACK)</option>
+                                <option >Hyundai Getz Prime (HATCHBACK)</option>
+                                <option >Hyundai Grand i10 (HATCHBACK)</option>
+                                <option >Hyundai Grand i10 Sedan (HATCHBACK)</option>
+                                <option >Hyundai Grand i20 (HATCHBACK)</option>
+                                <option>Hyundai H800 (HATCHBACK)</option>
+                                <option >Hyundai Hexa Space (EXOTIC)</option>
+                                <option >Hyundai i Flow (EXOTIC)</option>
+                                <option  >Hyundai i10 (HATCHBACK)</option>
+                                <option >Hyundai i10 Sedan (HATCHBACK)</option>
+                                <option >Hyundai i15 (HATCHBACK)</option>
+                                <option >Hyundai i20 (HATCHBACK)</option>
+                                <option >Hyundai i20 2009-2011 (HATCHBACK)</option>
+                                <option >Hyundai i20 2012-2014 (HATCHBACK)</option>
+                                <option >Hyundai i30 (HATCHBACK)</option>
+                                <option  >Hyundai i40 (SEDAN)</option>
+                                <option  >Hyundai i45 (SEDAN)</option>
+                                <option  >Hyundai ix25 (SUV)</option>
+                                <option  >Hyundai Santa Fe (SUV)</option>
+                                <option  >Hyundai Santa Fe 2009-2013 (SUV)</option>
+                                <option >Hyundai Santro (HATCHBACK)</option>
+                                <option >Hyundai Santro Xing (HATCHBACK)</option>
+                                <option >Hyundai Sonata (PREMIUM)</option>
+                                <option >Hyundai Sonata 2001-2004 (PREMIUM)</option>
+                                <option  >Hyundai Sonata Embera (PREMIUM)</option>
+                                <option  >Hyundai Sonata Transform (PREMIUM)</option>
+                                <option >Hyundai Terracan (SUV)</option>
+                                <option >Hyundai Tucson (SUV)</option>
+                                <option  >Hyundai Tucson 2005-2010 (SUV)</option>
+                                <option >Hyundai Veloster (EXOTIC)</option>
+                                <option>Hyundai Verna (SEDAN)</option>
+                                <option >Hyundai Verna 2006-2009 (SEDAN)</option>
+                                <option >Hyundai Verna 2006-2010 (SEDAN)</option>
+                                <option  >Hyundai Verna 2010-2011 (SEDAN)</option>
+                                <option >Hyundai Xcent (SEDAN)</option>
+                                <option >ICML Extreme (SUV)</option>
+                                <option >ICML Rhino Rx (SUV)</option>
+                                <option >Infiniti FX (LUXURY)</option>
+                                <option >Isuzu MU 7 (SUV)</option>
+                                <option  >Jaguar C X16 (PREMIUM)</option>
+                                <option >Jaguar C X17 (PREMIUM)</option>
+                                <option  >Jaguar C X75 (PREMIUM)</option>
+                                <option >Jaguar F Type (PREMIUM)</option>
+                                <option >Jaguar XE (PREMIUM)</option>
+                                <option  >Jaguar XF (PREMIUM)</option>
+                                <option  >Jaguar XFR (PREMIUM)</option>
+                                <option >Jaguar XJ (PREMIUM)</option>
+                                <option  >Jaguar XJ 2009-2013 (PREMIUM)</option>
+                                <option >Jaguar XK (HATCHBACK)</option>
+                                <option  >Jeep Grand Cherokee (SUV)</option>
+                                <option >Jeep Wrangler (SUV)</option>
+                                <option >Koenigsegg Agera (EXOTIC)</option>
+                                <option >Lamborghini Aventador (EXOTIC)</option>
+                                <option  >Lamborghini Gallardo (EXOTIC)</option>
+                                <option  >Lamborghini Huracan (EXOTIC)</option>
+                                <option >Lamborghini Murcielago (EXOTIC)</option>
+                                <option >Land Rover DC100 (PREMIUM)</option>
+                                <option>Land Rover Defender (PREMIUM)</option>
+                                <option  >Land Rover Discovery 3 (PREMIUM)</option>
+                                <option  >Land Rover Discovery 4 (PREMIUM)</option>
+                                <option  >Land Rover Discovery Sport (PREMIUM)</option>
+                                <option >Land Rover Freelander 2 (PREMIUM)</option>
+                                <option  >Land Rover Range Rover (PREMIUM)</option>
+                                <option  >Land Rover Range Rover Evoque (PREMIUM)</option>
+                                <option  >Land Rover Range Rover Sport (PREMIUM)</option>
+                                <option  >Land Rover Range Rover Sport 2005-2012 (PREMIUM)</option>
+                                <option  >Lexus ES (PREMIUM)</option>
+                                <option  >Lexus GS (PREMIUM)</option>
+                                <option  >Lexus GX (PREMIUM)</option>
+                                <option >Lexus IS (PREMIUM)</option>
+                                <option  >Lexus LM (PREMIUM)</option>
+                                <option  >Lexus LS (PREMIUM)</option>
+                                <option >Lexus Ls 460 (PREMIUM)</option>
+                                <option  >Lexus LX (PREMIUM)</option>
+                                <option >Lexus LX 470 (PREMIUM)</option>
+                                <option >Lexus RX (PREMIUM)</option>
+                                <option  >Lexus SC 430 (PREMIUM)</option>
+                                <option >Mahindra Armada (SUV)</option>
+                                <option  >Mahindra Bolero (SUV)</option>
+                                <option >Mahindra Bolero 2001-2010 (SUV)</option>
+                                <option >Mahindra e2o (HATCHBACK)</option>
+                                <option >Mahindra Ingenio (SUV)</option>
+                                <option  >Mahindra Jeep (SUV)</option>
+                                <option  >Mahindra Logan (SEDAN)</option>
+                                <option >Mahindra Marshal (SUV)</option>
+                                <option  >Mahindra Quanto (SUV)</option>
+                                <option  >Mahindra Renault Logan (SEDAN)</option>
+                                <option >Mahindra Renault Logan Edge (SEDAN)</option>
+                                <option  >Mahindra Renault Sandero (HATCHBACK)</option>
+                                <option  >Mahindra Scorpio (SUV)</option>
+                                <option >Mahindra Scorpio 2002-2013 (SUV)</option>
+                                <option  >Mahindra Scorpio W (SUV)</option>
+                                <option  >Mahindra Ssangyong Korando (PREMIUM)</option>
+                                <option  >Mahindra Ssangyong Rexton (PREMIUM)</option>
+                                <option  >Mahindra Ssangyong Rodius (PREMIUM)</option>
+                                <option  >Mahindra Ssangyong S101 (PREMIUM)</option>
+                                <option >Mahindra SsangYong Tivoli (PREMIUM)</option>
+                                <option  >Mahindra Thar (SUV)</option>
+                                <option  >Mahindra Verito (HATCHBACK)</option>
+                                <option  >Mahindra Verito 2010-2011 (HATCHBACK)</option>
+                                <option >Mahindra Verito Vibe (HATCHBACK)</option>
+                                <option >Mahindra XUV500 (SUV)</option>
+                                <option  >Mahindra Xylo (SUV)</option>
+                                <option >Mahindra Xylo 2009-2011 (SUV)</option>
+                                <option  >Mahindra Xylo Mini (SUV)</option>
+                                <option  >Maruti 1000 (SEDAN)</option>
+                                <option  >Maruti 800 (HATCHBACK)</option>
+                                <option  >Maruti A-Star (HATCHBACK)</option>
+                                <option  >Maruti Alto (HATCHBACK)</option>
+                                <option  >Maruti Alto 800 (HATCHBACK)</option>
+                                <option  >Maruti Alto K10 (HATCHBACK)</option>
+                                <option >Maruti APV (MUV)</option>
+                                <option >Maruti Baleno (SEDAN)</option>
+                                <option >Maruti Celerio (HATCHBACK)</option>
+                                <option >Maruti Cervo (HATCHBACK)</option>
+                                <option  >Maruti Ciaz (SEDAN)</option>
+                                <option >Maruti Eeco (MUV)</option>
+                                <option >Maruti Ertiga (MUV)</option>
+                                <option >Maruti Esteem (SEDAN)</option>
+                                <option >Maruti Estilo (HATCHBACK)</option>
+                                <option >Maruti Grand Vitara (SUV)</option>
+                                <option>Maruti Gypsy (SUV)</option>
+                                <option >Maruti iV-4 (SUV)</option>
+                                <option >Maruti Jimny (SUV)</option>
+                                <option >Maruti Kizashi (PREMIUM)</option>
+                                <option >Maruti MR Wagon (HATCHBACK)</option>
+                                <option >Maruti Omni (MUV)</option>
+                                <option >Maruti Palette (MUV)</option>
+                                <option >Maruti R3 (EXOTIC)</option>
+                                <option >Maruti Ritz (HATCHBACK)</option>
+                                <option >Maruti Ritz 2009-2011 (HATCHBACK)</option>
+                                <option >Maruti Swift (HATCHBACK)</option>
+                                <option>Maruti Swift 2004-2010 (HATCHBACK)</option>
+                                <option >Maruti Swift 2011-2014 (HATCHBACK)</option>
+                                <option >Maruti Swift Dzire (SEDAN)</option>
+                                <option >Maruti Swift Dzire 2008 (SEDAN)</option>
+                                <option >Maruti Swift Dzire CS (SEDAN)</option>
+                                <option >Maruti SX4 (SEDAN)</option>
+                                <option >Maruti SX4 2007-2012 (SEDAN)</option>
+                                <option>Maruti SX4 Hatchback (SEDAN)</option>
+                                <option>Maruti SX4 S Cross (SEDAN)</option>
+                               
+                                <option >Tata TL (SUV)</option>
+                                <option >Tata Venture (PREMIUM)</option>
+                                <option >Tata Winger (PREMIUM)</option>
+                                <option>Tata Winger Platinum (PREMIUM)</option>
+                                <option >Tata Xenon XT (SUV)</option>
+                                <option >Tata Xover (SUV)</option>
+                                <option >Tata Zest (PREMIUM)</option>
+                                <option >Toyota Camry (PREMIUM)</option>
+                                <option>Toyota Camry 2002-2011 (PREMIUM)</option>
+                                <option >Toyota Corolla (SEDAN)</option>
+                                <option >Toyota Corolla Altis (SEDAN)</option>
+                                <option >Toyota Corolla Altis 2010-2013 (SEDAN)</option>
+                                <option >Toyota Corona (SEDAN)</option>
+                                <option >Toyota Etios (SEDAN)</option>
+                                <option >Toyota Etios 2010-2012 (SEDAN)</option>
+                                <option >Toyota Etios 2013-2014 (SEDAN)</option>
+                                <option >Toyota Etios Cross (HATCHBACK)</option>
+                                <option >Toyota Etios Liva (HATCHBACK)</option>
+                                <option>Toyota Etios Liva 2011-2012 (HATCHBACK)</option>
+                                <option >Toyota Etios Liva 2013-2014 (HATCHBACK)</option>
+                                <option >Toyota Fortuner (SUV)</option>
+                                <option >Toyota Fortuner 2009-2011 (SUV)</option>
+                                <option >Toyota Innova (SUV)</option>
+                                <option >Toyota Innova 2004-2011 (SUV)</option>
+                                <option >Toyota Innova 2009-2011 (SUV)</option>
+                                <option >Toyota Innova 2012-2013 (SUV)</option>
+                                <option  >Toyota Land Cruiser (PREMIUM)</option>
+                                <option  >Toyota Land Cruiser Prado (PREMIUM)</option>
+                                <option  >Toyota Land Cruiser Prado 2009-2013 (PREMIUM)</option>
+                                <option >Toyota Majesta (PREMIUM)</option>
+                                <option >Toyota MR2 (PREMIUM)</option>
+                                <option >Toyota MRS (PREMIUM)</option>
+                                <option >Toyota prado (PREMIUM)</option>
+                                <option  >Toyota Prius (PREMIUM)</option>
+                                <option  >Toyota Qualis (SUV)</option>
+                                <option >Toyota Rush (SUV)</option>
+                                <option >Toyota Sera (HATCHBACK)</option>
+                                <option  >Toyota Tercel (SEDAN)</option>
+                                <option  >Toyota trueno (SEDAN)</option>
+                                <option  >Volkswagen 1600 (SEDAN)</option>
+                                <option >Volkswagen Beetle (PREMIUM)</option>
+                                <option  >Volkswagen Caraville (SUV)</option>
+                                <option >Volkswagen CrossPolo (HATCHBACK)</option>
+                                <option >Volkswagen Golf (HATCHBACK)</option>
+                                <option >Volkswagen Jetta (SEDAN)</option>
+                                <option >Volkswagen Jetta 2007-2011 (SEDAN)</option>
+                                <option >Volkswagen Passat (SEDAN)</option>
+                                <option >Volkswagen Phaeton (PREMIUM)</option>
+                                <option  >Volkswagen Polo (HATCHBACK)</option>
+                                <option >Volkswagen Polo 2009-2013 (HATCHBACK)</option>
+                                <option  >Volkswagen Rocktan (HATCHBACK)</option>
+                                <option >Volkswagen Touareg (SUV)</option>
+                                <option  >Volkswagen Touareg 2010-2011 (SUV)</option>
+                                <option  >Volkswagen Up (HATCHBACK)</option>
+                                <option  >Volkswagen Vento (SEDAN)</option>
+                                <option  >Volkswagen Vento 2010-2013 (SEDAN)</option>
+                                <option  >Volkswagen XL1 (PREMIUM)</option>
+                                <option >Volvo C30 (PREMIUM)</option>
+                                <option  >Volvo C70 (PREMIUM)</option>
+                                <option  >Volvo S 80 (PREMIUM)</option>
+                                <option  >Volvo S 80 2006-2013 (PREMIUM)</option>
+                                <option >Volvo S100 (PREMIUM)</option>
+                                <option >Volvo S60 (PREMIUM)</option>
+                                <option  >Volvo S60 2006-2012 (PREMIUM)</option>
+                                <option >Volvo S90 (PREMIUM)</option>
+                                <option  >Volvo V40 (PREMIUM)</option>
+                                <option >Volvo XC 90 (PREMIUM)</option>
+                                <option  >Volvo XC30 (PREMIUM)</option>
+                                <option  >Volvo XC40 (PREMIUM)</option>
+                                <option  >Volvo XC60 (PREMIUM)</option>
+                                <option >Volvo XC60 2008-2012 (PREMIUM)</option>
+                                <option  >CRETA (MUV)</option>
+                                <option >S-CROSS (MUV)</option>
+                                <option  >BREZZA-VITARA (MUV)</option>
+                                <option  >TUV-300 (SUV)</option>
+                                <option  >KUV-100 (HATCHBACK)</option>
+
+
+								
+                                
+
+							</select>
+						</div>
+						<div class="col-md-6" style="padding:30px";>
+							<select class="form-control" name="selectservice" required>	
+								
+						<option>SILVER WASH</option>
+																				<option>GOLD WASH</option>
+																				<option>PLENTIUM WASH</option>
+																				<option>INTESIVE INTERNAL CLEANING</option>
+																				<option>WAX RUBBING AND BUFFING</option>
+																				<option>TEFLON COATING</option>
+																				<option >ENGINE DEGRESING & COATING</option>
+																				<option>
+A.C. TREATMENT</option>
+																				<option>ALLOY DESCALING & TYRE TREATMENT TYRE TREATMENT</option>
+																				<option>HEADLIGHT RESTORATION</option>
+																				<option>UPHOLSTERY PROTECTION</option>
+																				<option>WINDSHIELD TREATMENT TREATMENT</option>
+																				<option>LEATHER COATING</option>
+																				
+																				
+							</select>
+						</div>
+					
+	
+					
+	<div class="col-md-12">				 
+						<div class="form-group col-md-6">
+							<label>Preferable date:</label>
+							<div class="hero-unit" >
+						<input type="text" id="datepicker" name="preferdate" class="form-control"> 
+							</div>
+												    </div>																				
+						<div class="form-group col-md-6">
+							<label>Preferable time:</label>	
+                            <select class="form-control slottime slot-5" name="prefertime" id="preferTime" required>
+							<option value="car">--Select Time--</option>
+																				<option>8AM-10AM</option>
+																				<option >10AM-12AM</option>
+																				<option>12PM-2PM</option>
+																				<option>2PM-4PM</option>
+																				<option>4PM-6PM</option>
+																				</select>
+						<label class="time-text">Slot Availability & Exact time will be Confirmed and Coordinated over Call/SMS</label>
+						</div>
+						
+					</div>
+			  		
+			        <div class="clearfix"></div>
+                    <div class="col-md-12">
+					    <div class="alert alert-info">				
+						<label class="">
+						<input name="call" class="box" type="checkbox" id="call">
+						<span class="c-indicator"></span>( I will confirm the preferred date and time over call)</label>
+					    </div>
+				    </div>										
+					
+					
+				<div class="col-md-12">
+						<div class="form-group col-md-12">
+							<label>Additional Information and Special Requests (if any):</label>
+							<textarea name="otherInfo" class="form-control" rows="3" ></textarea>		
+						 </div>
+					</div>	
+								   													
+			
+                <div class="col-sm-12 form-group">
+                    <button type="submit" class="btn btn-lg btn-warning btn-block" >Complete Booking</button>
+                
+</div>				
+				
+	</form>
+ 			 
+
+        
+		</div>
+		</div>
+		
+		
+    
+		<script>
+		$(function(){
+    $("#datepicker").datepicker({
+        dateFormat: "yy-mm-dd"
+    });
+});
+$(function(){
+    $("#datepicker").datepicker();
+});
+		
+
+$(function(){
+    $("#datepicker").datepicker({
+        changeMonth: true,
+        changeYear: true
+    });
+});
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#form").hide();
+  });
+  $("#show").click(function(){
+    $("#form").show();
+  });
+});
+</script>	
+		
+		
+		
+		
+		
+		
+		
+
+{% endblock %}

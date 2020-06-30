@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+<style>
+
+.subcard{
+	border:2px outset #d7d7d9; box-shadow:2px 2px 10px ##FFFFFF; margin-bottom:30px; margin-top:30px; text-transform:capitalize;
+	padding:10px; text-align:center;
+
+
+}
+.blog.title{ font-weight:bold;font-size:10px;font-style:italic;}
+.blog .detail{ font-style:italic;padding:10px;text-align:center;}
+.blog .date{ font-weight:bold; color:black;text-align:left;}
+.blog .name{ font-weight:bold; color:black;text-align:left;}
+.subcard h2{font-weight:bold;font-size:25px;}
+.detail{ font-style:italic;padding:10px;text-align:center;}
+.row{background-color:#f2f2f2;}
+#image4 h1{ padding-top:60px; color:#F5B900; text-align:center;font-family:serif; font-style: italic; font-size:50px;}
+
+#navi{background-color:#F5B900;}
+#navi{padding:40px;}
+#head{background-color:#f2f2f2; padding:20px;}
+ #head h2,nav{ padding-left:60px;}
+
+ 
+.pagination a { text-align:center;
+  margin: 0 4px; /* 0 is for top and bottom. Feel free to change it */
+  
+ 
+}
+</style>
+
+
+<div class="row" id="head1">
+<div class="parallax4" id="image4">
+<div class="col-md-12">
+<h1><b> OUR BLOG</b></h1>
+
+</div>
+</div>
+</div>
+
+<div class="row" id="blog">
+<div class="col-md-10 col-md-offset-1">
+{% for blog in object_list %}
+<div class="col-md-12">
+<div class="col-md-12 subcard">
+<h2>{{ blog.title}}</h2>
+<p class="name">{{ blog.name }}</p>
+<p class="date">{{ blog.date }}</p>
+<img src="/media/{{ blog.photo }}" height="300" width="80%" />
+<p class="detail">{{ blog.detail}}<br>
+<!--<button onclick="myFunction()" id="myBtn">Read more</button>-->
+</p>
+
+
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+
+<div class="row" id="navi">
+
+<div class="pagination">
+
+<li><a href="/blog/">1</a></li>
+<li><a href="/blog1/">2</a></li>
+
+
+
+</div>
+</div>
+
+{% endblock %}

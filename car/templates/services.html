@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<style>
+#services{padding:30px;  }
+
+#head{background-color:#f2f2f2; padding:20px;}
+ #head h2,nav{ padding-left:60px;font-family:serif; font-style: italic;}
+ #aboutus h1{text-align:center;font-family:serif; font-style: italic;}
+#aboutus h2{font-family:serif; font-style: italic;}
+#aboutus h5{font-size:19px; text-align:center;font-family:serif; font-style: italic;}
+#aboutus h6{font-size:19px; padding-right:40px;font-family:serif; font-style: italic; }
+#aboutus img{ border:3px solid black;}
+#ser{padding:60px; background-color:#f2f2f2;}
+#ser h1{font-family:serif; font-style: italic; font-weight:bold;}
+#ser h4{font-family:serif; font-style: italic; }
+#ser2{padding-bottom:60px; background-color:#f2f2f2;padding:30px;}
+#ser2 h1{font-family:serif; font-style: italic; font-weight:bold;}
+#ser2 h4{font-family:serif; font-style: italic; }
+#howwe{padding-bottom:100px;}
+.pagination a { text-align:center;
+  margin: 0 4px; /* 0 is for top and bottom. Feel free to change it */
+  
+ 
+}
+#navi{background-color:#F5B900;}
+#navi{padding:40px;}
+#det h1{font-family:serif; font-style: italic;font-weight;bold;padding:20px;}
+
+#det h4{font-family:serif; font-style: italic;padding:20px;}
+#det{padding-left:40px;padding-bottom:70px;padding-top:70px;}
+#img{padding:40px; }
+#image2 h1{ padding-top:60px; color:#F5B900; text-align:center;font-family:serif; font-style: italic; font-size:50px;}
+
+
+</style>
+<div class="row" id="head1">
+<div class="parallax2" id="image2">
+<div class="col-md-12">
+<h1><b> OUR SERVICES</b></h1>
+
+</div>
+</div>
+</div>
+<div class="row" id="det">
+<div class="col-md-12">
+<div class="col-md-6">
+<h1><b>Professional</b><span style="color:#F5B900;"><b> Services</b></span></h1>
+
+<h4>While the market is glowing with amazing business opportunities that will surely succeed, Car Wash offers an entry in the new business segment. By and large, car sales are going up continuously.<br><br>
+
+As a result, smart car washes would certainly throw open new opportunity. This venture is sure to succeed as car cleanliness especially of the exterior look and car hygiene is catching up in a big way.</h4>
+</div>
+<div class="col-md-6">
+<img src="{% static 'img3.jpg'  %}" />
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="col-md-3" >
+	<img src="{% static 'up2.jpg' %}" height="200" width="100%">
+	<img src="{% static 'up9.jpg' %}" height="200" width="100%">
+	</div>
+	<div class="col-md-3">
+	<img src="{% static 'up6.jpg' %}" height="200" width="100%">
+	<img src="{% static 'pp.jpg' %}" height="200" width="100%">
+	</div>
+	<div class="col-md-3">
+	<img src="{% static 'gold-wash.jpg' %}" height="200" width="100%">
+	<img src="{% static 'about1.jpg' %}" height="200" width="100%">
+	</div>
+	<div class="col-md-3">
+	<img src="{% static 'car-wind.png' %}" height="200" width="100%">
+	<img src="{% static '56.jpg' %}" height="200" width="100%">
+	</div>
+
+	
+
+<div class="row"id="how">
+<div class="col-md-12">
+<h1><span style="color:black;"><b> How<b></span> <span style="color:#F5B900;">We Work</span></h1>
+</div>
+</div>
+
+<div class="row" id="howwe">
+<div class="col-md-10 col-md-offset-1">
+<div class="row" id="a1">
+<div class="col-md-3">
+<span class="glyphicon glyphicon-bell workicon"></span>
+
+<h2>1. Contacting Us Anytime</h2>
+
+<h5>Call us for a pickup or drive straight up to our workshop and 
+leave the car under our care. 
+We always exceed your expectations!</h5>
+</div>
+
+<div class="col-md-3">
+<i class="glyphicon glyphicon-ok-sign workicon"></i>
+
+<h2>2. Car Care System-CCS</h2>
+
+<h5>Using our state of the art CCS, we will service your car and restore its 
+pristine glory exactly the way it came out of the showroom!</h5>
+</div>
+
+<div class="col-md-3">
+<i class="glyphicon glyphicon-wrench workicon"></i>
+
+<h2>3. Multiple Point Check</h2>
+
+<h5>Based on your service requirements, we will attend to your car’s needs and 
+recommend our own template of CCS for management.</h5>
+</div>
+
+<div class="col-md-3">
+<i class="glyphicon glyphicon-ok workicon"></i>
+<h2>4. We Drop Anywhere</h2>
+
+<h5>Once the service is completed we would deliver your car to your residence or office 
+according to your choice in the shortest possible time!</h5>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="row" id="ser">
+<div class="col-md-12">
+<div class="col-md-5">
+<img src="{% static 'services-img-1.jpg' %}" height="300px" width="100%">
+</div>
+<div class="col-md-4">
+<h1><span style="color:black;"><b>Our Washing<b></span> <span style="color:#F5B900;">Services</span></h1>
+<h4>At Dhillon First Choice Services, we offer an extensive range of car wash and cleaning services. Our car grooming packages include a complete range of services right from basic car washing to detailed interior and upholstery cleaning, protective coating, vacuuming and dashboard polishing.</h4>
+
+</div>
+<div class="col-md-3">
+<img src="{% static 'services-img-1.jpg' %}" height="300px" width="100%">
+</div>
+
+</div>
+</div>
+
+<div class="row" id="ser2">
+<div class="col-md-12">
+
+<div class="col-md-5">
+<h1><span style="color:black;"><b>Car Wash and <b></span> <span style="color:#F5B900;"> Cleaning Services</span></h1>
+<h4>inerior and Upholstery Cleaning
+- Cleaning, disinfection from germs and fresh interiorsWax Polish
+- Most economical polish treatment and shine the car instantlyPaint Restoration Polish
+- High gloss and finishing, aesthetic value of car is improvedUnderbody Antirust Treatment
+- Seals and protects the under chassis of car from impact , long term protection against rusting to the underbody of the vehicle</h4>
+
+</div>
+<div class="col-md-4">
+<img src="{% static 'services-img-3-1.jpg' %}" height="300px" width="100%">
+</div>
+
+<div class="col-md-3">
+<h1><span style="color:black;"><b>Greatly Reduce <b></span> <span style="color:#F5B900;">Wear and Tear</span></h1>
+<h4>When you overlook the cleanliness of the interior of your car, your car’s interior surfaces could start to develop faster wear and tear. Dirt and dust are abundant in India, and with the occasional spilled substances, your car’s upholstery is always prone to being worn down.</h4>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row text-center" id="navi">
+<div class="pagination">
+<h2 style="font-family:monotype corsiva;">Know More About Our Services</h2>
+<a href="/washing/"><button class="btn btn-primary"> Washing</button></a>
+<a href="/detailing/"><button class="btn btn-primary"> Detailing</button></a>
+
+
+
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+{% endblock %}

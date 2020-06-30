@@ -1,0 +1,160 @@
+{% load staticfiles %}
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="{% static 'bootstrap/css/bootstrap.min.css' %}" type="text/css" rel="stylesheet"/>
+<link href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}" type="text/css" rel="stylesheet"/>
+<link href="{% static 'style.css' %}" type="text/css" rel="stylesheet"/>
+
+
+<script src="{% static 'bootstrap/jquery.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+
+<body>
+
+
+<div class="container-fluid">
+<div class="row" id="header">
+<div class="col-md-5">
+<nav class="navbar-inverse">
+<ul class="nav navbar-nav">
+
+</ul>
+</nav>
+
+</div>
+
+
+
+
+<div class="col-md-7">
+<nav class="navbar-inverse">
+<ul class="nav navbar-nav">
+
+
+<li><a href="/booking/"><span class="glyphicon glyphicon-bell"></span> BOOKING NOW!</a></li>
+<li><a href="/feedback/"><span class="glyphicon glyphicon-envelope"></span> FEEDBACK</a></li>
+
+<li><a href="/query/"><span class="glyphicon glyphicon-question-sign"></span></span> HAVE ANY QUERY?</a></li>
+<li><a href="/contact/"><span class="glyphicon glyphicon-user"></span></span> CONTACT US</a></li>
+
+
+
+</ul>
+
+
+</nav>
+</div>
+</div>
+
+<div class="row" id="about">
+<div class="col-md-4">
+<h1><b>Dhillon <span style="color:#F5B900;font-family:serif; font-style: italic;"><b>Car Wash<b></span></h1>
+</div>
+
+<div class="col-md-8">
+
+<p>
+<nav class="navbar-inverse" id="nav">
+<ul class="nav navbar-nav">
+<li><a href="/carwash/">Home</a></li>
+<li><a href="/about/">About Us</a></li>
+
+<li><a href="/Product/">Products</a></li>
+<li><a href="/services/">Services& Prices</a></li>
+
+
+
+
+
+<li><a href="/gallary/">Gallary</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/contact/">Contact Us</a></li>
+
+</ul>
+
+</nav>
+</p>
+
+
+</div>
+</div>
+
+
+{% block content %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row" id="contact">
+<div class="col-md-6">
+<h1>Car <span style="color:#F5B900;">Wash</span></h1>
+<p>Using state of the art technology, we undertake car wash and servicing of your dream 
+machine. We know how much you value your vehicle. We match your expectations when you leave 
+your car under our care. We restore the originality of your car.</p>
+<h4><span class="glyphicon glyphicon-envelope"></span> <span>84722-70911</span></h4>
+<h4><span class="glyphicon glyphicon-earphone"></span> <span>admin@carwash.com</span></h4>
+
+
+</div>
+
+<div class="col-md-6">
+<h1>Opening <span style="color:#F5b900;">Hours</span></h1>
+<hr>
+<p>Monday - Saturday:-                  9.00 - 20.00 hrs</p>
+
+<p>Sunday:-                            09.00 - 16.00 hrs</p>
+
+
+</div>
+</div>
+<style>
+#contact span{color:white;}
+#contact h2{padding-top:40px;}
+#contact p{padding-top:30px;}
+</style>
+<div class="row" id="i">
+<hr>
+<div class="col-md-6">
+
+<p>Dhillon Car Wash © 2020. All Rights Reserved.</p>
+</div>
+
+<div class="col-md-6">
+<nav class="navbar-inverse">
+<ul class="nav navbar-nav">
+<li><a href="/carwash/">Home</a></li>
+<li><a href="/about/">About Us</a></li>
+<li><a href="/product/">Product</a></li>
+<li><a href="/servics/">Services</a></li>
+<li><a href="/blog1/">Blog</a></li>
+<li><a href="/gallary/">Gallary</a></li>
+<li><a href="/contact/">Contact Us</a></li>
+
+</ul>
+
+
+</nav>
+</div>
+</div>
+
+ 

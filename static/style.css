@@ -1,0 +1,453 @@
+#header{ background-color:#404040; color:#F5B900; text-align:center-left; }
+#header a{color:#F5B900; font-size:17px;font-family:serif; font-style: italic;}
+#header {color:#F5B900; font-size:17px;font-family:serif; font-style: italic;}
+#header a:hover{ color:white;}
+#header span{color:white; }
+#about { background-color:#000; padding:30px; color:white; text-align:center;transition: 0.2s;font-family:serif; font-style: italic;}
+#content{ background-color:#F5B900; padding:70px; text-align:center;  }
+#content p{ text-align:center; }
+#content h1{ color:black; text-align:center;font-family:serif; font-style: italic;}
+#content h2{ color:black; text-align:center;font-family:serif; font-style: italic;}
+#content h5{ color:black; text-align:center;font-family:serif; font-style: italic;}
+#content h3{ color:black; text-align:center;}
+/* Style the links inside the sidenav */
+
+
+
+
+
+#nav a{ color:white; font-size:20px;}
+#nav a:hover{ color:#F5B900;}
+#how{ text-align:center; padding:70px;}
+#how h1{font-size:50px;font-family:serif; font-style: italic;}
+#how h2{font-family:serif; font-style: italic;}
+#a1 h5{font-family:serif; font-style: italic; font-size:15px;}
+#a1 h2{ color:black;font-family:serif; font-style: italic;}
+#our{  background-color:#f2f2f2; padding:50px; }
+#our h3{color:black; font-size:35px;font-family:serif; font-style: italic;}
+#our h2{color:black; font-family:serif; font-style: italic;}
+#d1,#d3,#d5{ background-color:black; padding:40px; }
+#d2,#d4,#d6{ background-color:grey; padding:40px; }
+#img a{ color:yellow;}
+#b{ padding:60px 10px 60px 10px; background-color:black; color:#cccbca; font-size:15px;}
+#more{ background-color:white;  color:grey; }
+#more a:hover{ color:#F5B900;}
+.item img{ height:600px !important; width:100%;}
+.workicon{ background:black; color:#F5B900; padding:20px; border-radius:100px; font-size:22px;}
+.workicon:hover{ background:#F5B900; color:white;}
+.icon:hover{ background:#F5B900; color:white;}
+#contact{ background-color:black; padding:60px; }
+#contact h1{ color:white;font-family:serif; font-style: italic;}
+#contact h2{ color:white;font-family:serif; font-style: italic;}
+#contact p{ color:grey;font-family:serif; font-style: italic;}
+#i{ background-color:black; color:grey; padding:20px; }
+#i a:hover{ color:#F5B900;}
+.more{ color:#F5B900; border-radius:100px; font-size:22px; }
+
+.servicediv{background-color:#f2f2f2;}
+
+#services h5{font-size:14px;padding-left:20px;padding-top:10px;}
+
+#service h1{color:black; background-color:#f2f2f2; text-align:center;padding:50px;}
+#services h4{text-align:left; color:#1a1a1a; font-size:30px; padding-left:20px;padding-top:10px;}
+#accordion{padding-top:60px;}
+#services{padding:70px; padding-top:30px;}
+.bannerimg img{border-bottom:5px solid #F5B900; border-top:5px solid #F5B900; }
+.btn{background-color:#F5B900; font-size:20px; color:white; text-align:center; }
+#icon{text-align:center;}
+#numbers{ padding:150px 0px 150px 0px;}
+#num{ padding:100px 0px 100px 0px;}
+
+/*about page*/
+#image{background-image:url('carwash10.jpg'); padding-bottom:250px; background-size:100% 400px; 
+  
+
+  
+ 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#image3{background-image:url('03.jpg'); padding-bottom:700px; background-size:100% 600px; 
+  
+
+  
+ 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#image2{background-image:url('photo1.jpg'); padding-bottom:150px; background-size:100% 600px; 
+  
+
+  
+ 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#image3{background-image:url('product2.jpg'); padding-bottom:150px; background-size:100% 600px; 
+  
+
+  
+ 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#image4{background-image:url('nn.jpg'); padding-bottom:150px; background-size:100% 600px; 
+  
+
+  
+ 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#image7{background-image:url('sto.jpg'); padding-bottom:150px; background-size:100% 600px; 
+  
+
+  
+ 
+  /* Center and scale the image nicely */
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#image8{background-image:url('csh2.jpg'); padding-bottom:150px; background-size:100% 600px; 
+  
+
+  
+ 
+  /* Center and scale the image nicely */
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#whowe{  padding-bottom:150px; background-color:#1a1a19; color:white;  }
+#whowe h6{  font-size:17px; color:white;  }
+#whowe h2{  padding-left:30px; color:white;  }
+#whowe3{  padding:70px; background-color:black; color:#cccbca; font-size:12px; }
+#whowe3 h5{  padding:70px; background-color:black; color:#cccbca; font-size:17px;font-family:serif; font-style: italic; }
+#whowe1{    font-size:15px; background-color:#f2f2f2; }
+#whowe1 h1{    padding:50px; padding-left:150px;font-family:serif; font-style: italic;}
+#whowe1 h5{    padding-left:150px; font-size:17; color:black; padding-top:10px;font-family:serif; font-style: italic;}
+
+ #aboutus{padding-bottom:40px; padding-top:50px;}
+ #achieve{padding:70px; text-align:center;}
+ .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+  width: 50%;
+}
+ #subachieve{padding-left:200px; padding-bottom:100px; padding-top:100px; padding-bottom:100px;}
+ #product{text-align:center; padding:50px;}
+#different	 {padding:100px; text-align:center; background-color:#f2f2f2;  }
+#aboutus p{padding-left:40px; padding-right:40px;}
+#aboutus1{background-color:#F5B900;color:black; padding:40px; text-align:center; }
+#aboutus2{background-color:#f2f2f2;  padding:30px; text-align:center; }
+#different{background-image:url('white1.png'); background-size:100% 600px;}
+
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* contact form*/
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea, email {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.map-container-3{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container-3 iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+Full page map
+
+
+
+/*contaact page*/
+
+#contactus{background-color:#f2f2f2;color:black; padding:20px; text-align:center;  }
+#contactus1{padding:50px;background-color:#f2f2f2;}
+#contactus1{background-image:url('clear2.jpg'); background-size:100% 600px;}
+
+#contactimg{background-image:url('vv.jpg'); background-size:100% 600px; padding-bottom:90px;}
+
+
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.parallax1 { 
+ 
+background-image: url("carwash10.jpg");
+  /* Set a specific height */
+  height: 250px; 
+  
+  
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  
+.parallax2 { 
+ 
+background-image: url("photo1.jpg");
+  /* Set a specific height */
+  height: 300px; 
+  
+  
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  .parallax3 { 
+ 
+background-image: url("product2.jpg");
+  /* Set a specific height */
+  height: 300px; 
+  
+  
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.parallax4 { 
+  /* The image used */
+  background-image: url("carblog7.jpg");
+
+  /* Set a specific height */
+  height: 300px; 
+  
+  
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax5 { 
+  /* The image used */
+  background-image: url("4.jpg");
+
+  /* Set a specific height */
+  height: 700px; 
+  
+  
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.parallax4 { 
+  /* The image used */
+  background-image: url("carblog6.jpg");
+
+  /* Set a specific height */
+  height: 250px; 
+  
+  
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax7 { 
+  /* The image used */
+  background-image: url("cart.jpg");
+
+  /* Set a specific height */
+  height: 300px; 
+  
+  
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax8 { 
+  /* The image used */
+  background-image: url("csh2.jpg");
+
+  /* Set a specific height */
+  height: 500px; 
+  
+  
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* feedback*/
+.form-container
+{
+	background-color: #fff;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 20px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+    border-radius: 8px;	
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+ #orig_article_block {
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        height:60px;
+        width:100%;
+        background:#222;
+        color:#fff;
+        padding: 10px;
+        }
+        #orig_article_block a
+        {
+          color:#fff;
+          text-decoration: underline;
+        }
+
+        /* IE 6 */
+        * html #orig_article_block {
+        position:absolute;
+        top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+        }
+		
+		
+		
+		
+		
+		
+		
+
+
+
+
+#login{background-image:url('photo2.jpg'); padding-bottom:40px; background-size:100% 400px; filter: blur(0px);
+-webkit-filter: blur(0px);background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;}  
+#anyquery{background-image:url('carblog6.jpg'); padding-bottom:40px; background-size:100% 400px; filter: blur(0px);
+-webkit-filter: blur(0px);background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;}  
+  
+  
+  {
+  box-sizing: border-box;
+}
+
+
+  
+  
+ 

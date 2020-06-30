@@ -1,0 +1,652 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<style>
+.parallax h1{text-align:center;  padding:40px;}
+.parallax h2{text-align:center; color:#F5B900; }
+.parallax p{text-align:center; color:white; }
+#services h5{font-size:17px;}
+.item img{height:400px !important; }
+
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <script src="{% static 'image-slider.slider.standard/js/jssor.slider-28.0.0.min.js' %}" type="text/javascript"></script>
+    <script type="text/javascript">
+    
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_SlideoTransitions = [
+              [{b:500,d:1000,x:0,e:{x:6}}],
+              [{b:-1,d:1,x:100,p:{x:{d:1,dO:9}}},{b:0,d:2000,x:0,e:{x:6},p:{x:{dl:0.1}}}],
+              [{b:-1,d:1,x:200,p:{x:{d:1,dO:9}}},{b:0,d:2000,x:0,e:{x:6},p:{x:{dl:0.1}}}],
+              [{b:-1,d:1,rX:20,rY:90},{b:0,d:4000,rX:0,e:{rX:1}}],
+              [{b:-1,d:1,rY:-20},{b:0,d:4000,rY:-90,e:{rY:7}}],
+              [{b:-1,d:1,sX:2,sY:2},{b:1000,d:3000,sX:1,sY:1,e:{sX:1,sY:1}}],
+              [{b:-1,d:1,sX:2,sY:2},{b:1000,d:5000,sX:1,sY:1,e:{sX:3,sY:3}}],
+              [{b:-1,d:1,tZ:300},{b:0,d:2000,o:1},{b:3500,d:3500,tZ:0,e:{tZ:1}}],
+              [{b:-1,d:1,x:20,p:{x:{o:33,r:0.5}}},{b:0,d:1000,x:0,o:0.5,e:{x:3,o:1},p:{x:{dl:0.05,o:33},o:{dl:0.02,o:68,rd:2}}},{b:1000,d:1000,o:1,e:{o:1},p:{o:{dl:0.05,o:68,rd:2}}}],
+              [{b:-1,d:1,da:[0,700]},{b:0,d:600,da:[700,700],e:{da:1}}],
+              [{b:600,d:1000,o:0.4}],
+              [{b:-1,d:1,da:[0,400]},{b:200,d:600,da:[400,400],e:{da:1}}],
+              [{b:800,d:1000,o:0.4}],
+              [{b:-1,d:1,sX:1.1,sY:1.1},{b:0,d:1600,o:1},{b:1600,d:5000,sX:0.9,sY:0.9,e:{sX:1,sY:1}}],
+              [{b:0,d:1000,o:1,p:{o:{o:4}}}],
+              [{b:1000,d:1000,o:1,p:{o:{o:4}}}]
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $CaptionSliderOptions: {
+                $Class: $JssorCaptionSlideo$,
+                $Transitions: jssor_1_SlideoTransitions
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$,
+                $SpacingX: 16,
+                $SpacingY: 16
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 1400;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <link href="//fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&subset=latin-ext,cyrillic-ext,vietnamese,latin,cyrillic" rel="stylesheet" type="text/css" />
+    <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,regular,italic,700,700italic&subset=latin-ext,greek-ext,cyrillic-ext,greek,vietnamese,latin,cyrillic" rel="stylesheet" type="text/css" />
+    <style>
+        /*jssor slider loading skin double-tail-spin css*/
+        .jssorl-004-double-tail-spin img {
+            animation-name: jssorl-004-double-tail-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-004-double-tail-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /*jssor slider bullet skin 031 css*/
+        .jssorb031 {position:absolute;}
+        .jssorb031 .i {position:absolute;cursor:pointer;}
+        .jssorb031 .i .b {fill:#000;fill-opacity:0.6;stroke:#fff;stroke-width:1600;stroke-miterlimit:10;stroke-opacity:0.8;}
+        .jssorb031 .i:hover .b {fill:#fff;fill-opacity:1;stroke:#000;stroke-opacity:1;}
+        .jssorb031 .iav .b {fill:#fff;stroke:#000;stroke-width:1600;fill-opacity:.6;}
+        .jssorb031 .i.idn {opacity:.3;}
+
+        /*jssor slider arrow skin 051 css*/
+        .jssora051 {display:block;position:absolute;cursor:pointer;}
+        .jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+        .jssora051:hover {opacity:.8;}
+        .jssora051.jssora051dn {opacity:.5;}
+        .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+    </style>
+	
+	<div class="row">
+	 
+<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-004-double-tail-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img data-u="image" data-src="{%static 'mm.jpg' %}" />
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+            <div style="background-color:#000000;">
+                <img data-u="image" data-src="{%static 'mani1.jpg' %}"  />
+               
+                <div data-ts="flat" data-p="320" style="left:144px;top:80px;width:550px;height:90px;position:absolute;overflow:hidden;">
+                    <div data-to="50% 50%" data-ts="preserve-3d" data-t="0" style="left:550px;top:0px;width:550px;height:90px;position:absolute;overflow:hidden;">
+                        <div data-to="50% 50%" data-ts="preserve-3d" data-arr="1" style="left:20px;top:18px;width:200px;height:20px;position:absolute;color:#F5B900;font-size:16px;font-weight:700;line-height:1.2;letter-spacing:0.1em;">BEST CAR WASH</div>
+                      
+					  
+					  
+					  <div data-to="50% 50%" data-ts="preserve-3d" data-arr="2" style="left:19px;top:36px;width:600px;height:30px;position:absolute;color:#edf1f2;font-size:24px;line-height:1.2;letter-spacing:0.05em;"><span style="font-weight:900;color:#e04338;">DON'T JUST CHASE YOUR DREAMS...</div>
+                   
+					</div>
+                </div>
+	       </div>
+			
+            <div>
+			<img data-u="image" data-src="{%static 'car-care-1.jpg' %}" />
+               
+                <div data-ts="flat" data-p="2720" data-po="50% 48%" style="left:0px;top:0px;width:980px;height:380px;position:absolute;">
+                    <div data-to="50% 50%" data-ts="preserve-3d" data-t="3" style="left:400px;top:-30px;width:500px;height:400px;position:absolute;">
+                        <div data-to="50% 50%" data-ts="preserve-3d" data-t="4" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+                            <div data-to="50% 50%" data-ts="preserve-3d" data-t="5" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+                                <div data-to="50% 50%" data-ts="preserve-3d" data-t="6" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+                                    <div data-to="50% 50%" data-t="7" style="left:-50px;top:175px;width:600px;height:38px;position:absolute;opacity:0;color:#F5B900;font-size:35px;font-weight:700;line-height:1.2;text-align:center;">EASILY USING STAUNING EFFECTS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img data-u="image" data-src="{%static 'uu.jpg' %}" />
+                <div data-ts="flat" data-p="2720" data-po="50% 48%" style="left:0px;top:0px;width:980px;height:380px;position:absolute;">
+                    <div data-to="50% 50%" data-ts="preserve-3d" data-arr="8" style="left:-2px;top:20px;width:1000px;height:20px;position:absolute;opacity:0;color:;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.2;letter-spacing:1.3em;text-align:center; color:red;"><b> EASILY PROVIDE BEST SERVICES OUR CUSTOMERS</b></div>
+                </div>
+            </div>
+            <div style="background-color:#000000;">
+                <img data-u="image" data-src="{%static 'vv.jpg' %}" />
+                <div data-ts="flat" data-p="1800" data-po="50% -100%" style="left:120px;top:90px;width:600px;height:300px;position:absolute;">
+                    <svg viewbox="0 0 200 200" width="200" height="200" data-t="10" style="left:66px;top:21px;display:block;position:absolute;opacity:0.6;overflow:visible;">
+                        <path stroke-dasharray="0,700" fill="none" stroke="#ffffff" d="M0,100C0,44.77152 44.77152,0 100,0C155.22848,0 200,44.77152 200,100C200,155.22848 155.22848,200 100,200C44.77152,200 0,155.22848 0,100Z" data-t="9"></path>
+                    </svg>
+                    <svg viewbox="0 0 80 80" width="80" height="80" data-t="12" style="left:3px;top:124px;display:block;position:absolute;opacity:0.6;overflow:visible;">
+                        <path stroke-dasharray="0,400" fill="none" stroke="#ffffff" shape-rendering="crispEdges" d="M80,80L0,80L0,0L80,0Z" data-t="11"></path>
+                    </svg>
+                    <svg viewbox="0 0 500 200" data-to="50% 50%" width="500" height="200" data-t="13" style="left:50px;top:50px;display:block;position:absolute;opacity:0;overflow:visible;">
+                        <g>
+                            <text fill="#ffffff" x="17" y="110" style="position:absolute;font-family:Montserrat,sans-serif;font-size:32px;font-weight:300;overflow:visible;">DHILLON
+                            </text>
+                            <text fill="#ffffff" x="188" y="110" style="position:absolute;font-family:Montserrat,sans-serif;font-size:32px;font-weight:500;letter-spacing:0.1em;overflow:visible;">CAR WASH
+                            </text>
+                            <text fill="#ff3700" x="218" y="130" style="position:absolute;font-family:Montserrat,sans-serif;font-size:16px;font-weight:900;letter-spacing:0.1em;overflow:visible;">CLEAN CAR
+                            </text>
+                            <text fill="#ff3700" x="333" y="130" style="position:absolute;opacity:0.8;font-family:Montserrat,sans-serif;font-size:16px;font-weight:700;letter-spacing:0.1em;overflow:visible;">INSIDE& OUTSIDE
+                            </text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div>
+             <img data-u="image" data-src="{%static 'mm.jpg' %}" />
+                <div data-ts="flat" data-p="500" style="left:160px;top:-30px;width:800px;height:200px;position:absolute;">
+                    <div data-arr="14" style="left:0px;top:36px;width:800px;height:70px;position:absolute;opacity:0;color:#F5B900;font-family:'Roboto Condensed',sans-serif;font-size:32px;font-weight:400;line-height:1.2;letter-spacing:-0.05em;text-align:center;text-shadow:2px 1px black;">ADDING&nbsp;&nbsp;<span style="font-size:2em;">PERFECTION</span>&nbsp; TO&nbsp; YOUR&nbsp;&nbsp;<span style="font-size:1.6em;">CAR</span></div>
+                    <div data-arr="15" style="left:0px;top:106px;width:800px;height:48px;position:absolute;opacity:0;color:#F5B900;font-family:'Roboto Condensed',sans-serif;font-size:20px;font-weight:400;line-height:1.2;letter-spacing:0.2em;text-align:center;text-shadow:1px 1px black;">NEW LOOK <span style="font-size:2em;">AND</span> NEW FEEL </div>
+                </div>
+            </div>
+        </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">slider html</a>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb031" style="position:absolute;bottom:16px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:13px;height:13px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
+    </div>
+	</div>
+    <script type="text/javascript">jssor_1_slider_init();
+    </script>
+    <!-- #endregion Jssor Slider End -->
+	
+<div class="row" id="content" >
+<div class="col-md-4">
+<div class="icon-wrapper" id="icon">
+<i class="glyphicon glyphicon-earphone workicon" ></i>
+</div>
+<h2><marquee direction="left"><b>Make a call</b></marquee></h2>
+<h5>Make a call to book your car wash. Our experts will reach your location with our mobile car washing vehicle.</h5>
+</div>
+<div class="col-md-4">
+<div class="icon-wrapper" id="icon">
+<i class=" glyphicon glyphicon-shopping-cart workicon"></i>
+</div>
+<h2><b><marquee direction="left">Book Online</b></marquee></h2>
+<h5>Book Online your car wash. Our experts will reach your location with our mobile car washing vehicle.</h5>
+</div>
+<div class="col-md-4" id="icon">
+<div class="icon-wrapper">
+<i class="glyphicon glyphicon-ok workicon"></i>
+</div>
+<h2><b><marquee direction="left">Complete Detailing</b></marquee></h2>
+<h5>Get complete detailing and upholstery services at your dhllion car wash at affordable price.</h5>
+</div>
+</div>
+
+<div class="row" id="whowe1">
+
+<div class="col-md-6" style="padding-left:40px;">
+<h1><span style="color:black;"><b> About<b></span> <span style="color:#F5B900;">CarWash</span></h1>
+
+<h5 > Our service is not just a wash as it is a real treatment for your car.  The car gets a rebirth due to our CCS which is truly regenerative therapy. Research has shown, steam pressure cleaning prevents corrosion for a period of 2 years when compared to the regular use of water for cleaning.
+
+
+ </h5>
+
+<ul>
+<h5><li>Fast, Professional and Friendly Service.</li></h5>
+<h5><li>Unlimited Help and Support, sharing the experience and best practices.</li></h5>
+<h5><li>Honest approach to business.</li></h5>
+<h5><li>An absolute Respect to our clients.</li></h5>
+<h5><li>Decent negotiation process, eliminating the unnecessary bureaucratic procedures.</li></h5>
+</ul>
+ </div>
+ 
+
+<div class="col-md-6">
+<img src="{% static 'redd.jpg'  %}" height="650px" width="102%";/> 
+</div>
+</div>
+
+<!--<div class="row" id="service">
+<div class="col-md-12">
+<h1><b>Our <span style="color:#F5B900;"><b>Services<b></span></h1>
+
+</div>
+</div>
+<!---<div class="row bannerimg" id="services" >
+<div class="col-md-4" >
+<div class="col-md-12 servicediv">
+
+<img src="{% static '44.jpg' %}" height="200" width="100%" />
+<h4><b>Car Detailing</b></h4>
+<h5>Detailing job is a thorough cleaning, restoration and finishing of the vehicle, show-quality cleaning and polishing. Detailing can be performed on a vehicle's exterior and interior also. Complete car detailing can get your ride looking gorgeous. During detailing, the exterior & interior of the car will be waxed to protect your vehicle's paint from peeling or fading. There is millions of dirt, dust or debris inside the vehicle; however, during vacuuming, it removes every piece of dirt, dust, germs.</h5>
+
+	<h4>  <button class="btn btn-warning" onclick="window.location.href = 'booking';">More</button></h4>
+</div>
+</div>
+<div class="col-md-4">
+<div class="col-md-12 servicediv">
+<img src="{% static '(1).jpg' %}" height="200" width="100%" />
+<h4><b>Car Washing</b></h4>
+<h5>Steam cleaning is the process of using steam vapor to clean vehicles exterior and interior. Steam has been an important component of cleaning for decades. Steam wash can sterilize and sanitize your vehicle. Steam Car Wash makes for cleaner, greener, healthier and stunning cars. It has the unique ability to clean and shine your vehicle simultaneously. It also has the ability to kill bacteria, germs, viruses, molds & other microorganisms. After all, Steam Wash is a complete car cleaning solution.</h5>
+
+	  <h4><button class="btn btn-warning" onclick="window.location.href = 'booking';">More</button></h4>
+</div>
+</div>
+<div class="col-md-4"  >
+<div class="col-md-12 servicediv">
+<img src="{% static 'images.jpg' %}" height="200" width="100%" />
+<h4><b>Dry Cleaning</b></h4>
+<h5>Dry car washing is a method consisting of car cleaning and polishing steps without using a large quantity of water. This method of cleaning has recently grown rapidly, which is called 'Save Water'. Complete car dry cleaning, seat cleaning, car vacuuming, car dash board polish are called 'healthy car'. Sofa, chair, carpet dry cleaning is the process of removing or sucking dirt and dust from your couch. In this way, effective cleaning agents are injected into your couch to remove dirt and grime.</h5>
+
+	 <h4> <button class="btn btn-warning" onclick="window.location.href = 'booking';">More</button></h4>
+</div>
+</div>
+</div>
+
+
+
+<!-- Container element -->
+<!--<div class="row">
+<div class="parallax">
+<div class="col-md-12">
+
+<h1><b>Why  <span style="color:#F5B900;"><b>Dhillon Car Wash<b></span></h1>
+<div class="col-md-4">
+<h1><img src="{% static 'icn1.png'  %}"></h1>
+
+<h2>1.EXPERIENCED PROFESSIONAL</h2>
+
+<p>A team of well trained personnel</p>
+</div>
+
+<div class="col-md-4">
+<h1><img src="{% static 'wtch.png'  %}"></h1>
+
+
+<h2>2.ON TIME SERVICE</h2>
+
+<p>A prompt and convenient car wash experience</p>
+</div>
+
+<div class="col-md-4">
+<h1><img src="{% static 'clean.png'  %}"></h1>
+
+<h2>3.CLEAN JUST IN 20 MINUTES</h2>
+
+<p>Fast paced and convenient car washing</p>
+</div>
+
+</div>
+
+<div class="col-md-4">
+<h1><img src="{% static 'ltst.png'  %}"></h1>
+
+<h2>4.LATEST EQUIPMENT</h2>
+
+<p>State-of-the-art cleaning equipmen</p>
+</div>
+
+<div class="col-md-4">
+<h1><img src="{% static 'eco.png'  %}"></h1>
+
+
+<h2>5.ECO FRIENDLY</h2>
+
+<p>A range of eco-friendly techniques are used for car cleaning</p>
+</div>
+
+<div class="col-md-4">
+<h1><img src="{% static 'relible.png'  %}"></h1>
+
+<h2>6.RELIABLE & TRANSPARENT</h2>
+
+<p>Hassle free professional cleaning services</p>
+</div>
+
+</div>
+</div>-->
+
+
+
+
+
+<div class="row"id="how">
+<div class="col-md-12">
+<h1><span style="color:black;"><b> How<b></span> <span style="color:#F5B900;">We Work</span></h1>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
+<div class="row" id="a1">
+<div class="col-md-3">
+<span class="glyphicon glyphicon-bell workicon"></span>
+
+<h2>1. Contacting Us Anytime</h2>
+
+<h5>Call us for a pickup or drive straight up to our workshop and 
+leave the car under our care. 
+We always exceed your expectations!</h5>
+</div>
+
+<div class="col-md-3">
+<i class="glyphicon glyphicon-ok-sign workicon"></i>
+
+<h2>2. Car Care System-CCS</h2>
+
+<h5>Using our state of the art CCS, we will service your car and restore its 
+pristine glory exactly the way it came out of the showroom!</h5>
+</div>
+
+<div class="col-md-3">
+<i class="glyphicon glyphicon-wrench workicon"></i>
+
+<h2>3. Multiple Point Check</h2>
+
+<h5>Based on your service requirements, we will attend to your car’s needs and 
+recommend our own template of CCS for management.</h5>
+</div>
+
+<div class="col-md-3">
+<i class="glyphicon glyphicon-ok workicon"></i>
+<h2>4. We Drop Anywhere</h2>
+
+<h5>Once the service is completed we would deliver your car to your residence or office 
+according to your choice in the shortest possible time!</h5>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="row" id="numbers">
+<div class="col-md-12">
+<div class="row" id="our">
+<div class="col-md-12">
+<h2><b>Our </b><span style="color:#F5B900;"><b> Numbers</b></span></h2>
+<div class="col-md-2">
+<h1 style="color:black";><span id="cnt" class="count" ><b>50</b></span><span id="cnt">+</span></h1>
+
+<p><b>Trained Staffs</b></marquee></p>
+</div>
+<div class="col-md-2">
+<h1 style="color:black";><span id="cnt" class="count" ><b>20</b></span><span id="cnt">+</span></h1>
+
+<p><b>Branches</b></p>
+</div>
+<div class="col-md-2">
+<h1 style="color:black";><span id="cnt" class="count" ><b>1500</b></span><span id="cnt">+</span></h1>
+
+<p><b>Satisfied Clients</b></p>
+</div>
+<div class="col-md-2">
+<h1 style="color:black";><span id="cnt" class="count" ><b>1000</b></span><span id="cnt">+</span></h1>
+
+<p><b>Jobs Done</b></p>
+</div>
+</marquee>
+</div>
+<div style="position:relative;">
+
+<img src="{% static '12.jpg' %}" height="400px" style="position:absolute; top:-100px; right:0px; border:black solid 5px;"/>
+</div>
+</div>
+</div>
+</div>
+<style>
+#iconfirst{background-color:black; padding:50px; text-align:center; }
+#iconsecond{background-color:gray; padding:50px; text-align:center; }
+.row  h3{color:white; padding-top:20px;font-family:serif; font-style: italic;}
+.row  h2{color:white; padding-top:4px;font-family:serif; font-style: italic;}
+#iconfirst:hover{ background:#F5B900; color:white;}
+#iconsecond:hover{ background:#F5B900; color:white;}
+</style>
+<div class="row" style="padding:60px";>
+<div class="col-md-12">
+<div class="col-md-4" id="iconfirst">
+<img src="{% static 'icon-image1.png' %}" >
+<h3>OPTI COAT</h3>
+</div>
+
+<div class="col-md-4" id="iconsecond">
+<img src="{% static 'icon-image2.png' %}" >
+<h3>CAR DETAILING</h3>
+</div>
+<div class="col-md-4" id="iconfirst">
+<img src="{% static 'icon-image3.png' %}" >
+<h3>CAR WASHING</h3>
+</div>
+</div>
+<div class="col-md-12">
+<div class="col-md-4" id="iconsecond">
+<img src="{% static 'icon-image4.png' %}" >
+<h2>ECO-FRIENDLY</h2>
+</div>
+
+<div class="col-md-4" id="iconfirst">
+<img src="{% static 'icon-image5.png' %}" >
+<h3>CAR CLEANING</h3>
+</div>
+<div class="col-md-4" id="iconsecond">
+<img src="{% static 'icon-image6.png' %}" >
+<h2>WHEEL ALIGN</h2>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row" id="whowe3">
+<div class="col-md-6">
+<video controls width="600" style="padding:40px";>
+  <source src="{% static 'video3.webm' %}" type="video/mp4" >
+  
+ 
+</video> 
+</div>
+<div class="col-md-6" >
+<h2 style="padding:20px";><b>The Main Goal</b><span style="color:#F5B900;"><b>   Of Car Wash</b></span></h2>
+<h5 style="padding:20px";> Car Wash provides you the best environmentally friendly spa service ever. We know out of the experience the best ways to give your car the showroom makeover it richly deserves. We are environment-friendly and care for our planet as much as we do for our customers.
+
+Our goal has always been to use eco-friendly and biodegradable materials so that we remain as the best eco-friendly service provider.
+<br><br>Our service is not just a wash as it is a real treatment for your car.  The car gets a rebirth due to our CCS which is truly regenerative therapy. 
+
+ </h5>
+
+
+ 
+</div>
+</div>
+
+
+
+<!--<div class="row" id="service">
+<div class="col-md-12">
+<h1><b>Our <span style="color:#F5B900;"><b>Pricing Plan<b></span></h1>
+</div>
+</div>
+<div class="container">
+<div class="columns">
+  <ul class="price">
+    <li class="header">Standard Car Wash</li>
+    <li class="grey">1500/-</li>
+    <li>Prewash</li>
+    <li>AC Checkups</li>
+    <li>Waxing</li>
+    <li>Manual Cleaning</li>
+    <li>Interiors</li>
+    <li>Engine Lubrication</li>
+    <li class="grey"><a href="/booking/" class="button">Book Now</a></li>
+  </ul>
+</div>
+<div class="columns">
+  <ul class="price">
+    <li class="header">Express Car Wash</li>
+    <li class="grey">2000/-</li>
+    <li>Car mats</li>
+    <li>Glass polishing</li>
+    <li>Dashboard Cleaning</li>
+    <li>AC vent cleaning</li>
+    <li>Interior vacuuming</li>
+    <li>Deep cleaning</li>
+    <li class="grey"><a href="/booking/" class="button">Book Now</a></li>
+  </ul>
+</div><div class="columns">
+  <ul class="price">
+    <li class="header">Total Car Care</li>
+    <li class="grey">2500/-</li>
+    <li>Car Exteriors</li>
+    <li>Car Interiors</li>
+    <li>Car underbody</li>
+    <li>Wheel alignment</li>
+    <li>Brakes</li>
+    <li>Steering</li>
+    <li class="grey"><a href="/booking/" class="button">Book Now</a></li>
+  </ul>
+</div>
+
+</div>-->
+<style>
+#content h1{font-size:100px;}
+#content h4{font-family:serif; font-style: italic;}
+</style>
+<div class="row" id="content">
+
+<div class="col-md-12">
+
+
+<marquee direction="left"><h1 style="color:white;" ><b> Make Your Car Shine</b></h1></marquee>
+<h4 style="color:black";><b> WE'LL MAKE YOUR CAR CLEAN OR WE'LL WASH IT AGAIN FOR FREE</b></h4>
+
+
+
+</div>
+</div>
+<script src="{% static 'bootstrap/jquery.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+
+
+
+</body>
+
+
+<script>
+var imgarray=['15.png','17.jpg','18.jpg'];
+var len=imgarray.len;
+var i=0;
+var s=setInterval(f,4000);
+
+function f()
+{
+	if(i==len)
+	{
+		i=0;
+	}
+	
+		document.getElementById("i2").src='/static/img/'+imgarray[i];
+i++;
+}
+
+$(document).ready(function(){
+$("#content").slideUp(1000).slideDown(1000);
+});
+
+
+
+_
+</script>
+<script>
+
+
+$('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+</script>
+</html>
+{% endblock %}
